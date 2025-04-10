@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: hello1springboot
+  name: hello1springboot
+spec:
+  ports:
+  - port: 8003
+    protocol: TCP
+    targetPort: 8000
+  selector:
+    app: hello1springboot
+  type: NodePort
+status:
+  loadBalancer: {}
