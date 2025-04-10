@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: develop
+  name: develop
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: develop
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: develop
+    spec:
+      containers:
+      - image: asnashameel/develop:latest
+        name: develop
+        resources: {}
+status: {}
